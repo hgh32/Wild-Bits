@@ -28,7 +28,6 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "botw-utils >= 0.2.2",
-        "cefpython3~=66.0; platform_system=='Windows'",
         "oead >= 1.1.1",
         "rstb >= 1.2.0",
         "pymsyt ~= 0.3.2",

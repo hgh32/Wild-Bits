@@ -369,26 +369,7 @@ def main():
     api.window = webview.create_window(
         f"Wild Bits {USER_VERSION}", url=f"{EXEC_DIR}/assets/index.html", js_api=api
     )
-    gui: str = ""
-    if system() == "Windows":
-        try:
-            # fmt: off
-            from cefpython3 import cefpython
-            del cefpython
-            gui = "cef"
-            # fmt: on
-        except ImportError:
-            pass
-    elif system() == "Linux":
-        try:
-            # fmt: off
-            from PyQt5 import QtWebEngine
-            del QtWebEngine
-            gui = "qt"
-            # fmt: on
-        except ImportError:
-            gui = "gtk"
-    webview.start(debug=True, http_server=gui == "", gui=gui, func=api.handle_file)
+    webview.start(debug=True, http_server=True, func=api.handle_file)
 
 
 if __name__ == "__main__":

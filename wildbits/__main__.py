@@ -369,7 +369,7 @@ def main():
     api.window = webview.create_window(
         f"Wild Bits {USER_VERSION}", url=f"{EXEC_DIR}/assets/index.html", js_api=api
     )
-    webview.start(debug=True, http_server=True, func=api.handle_file)
+    webview.start(debug=False, http_server=True, func=api.handle_file)
 
 
 if __name__ == "__main__":

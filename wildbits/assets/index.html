@@ -10,7 +10,15 @@
 
 <body>
     <div id="root"></div>
+    <script>
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
+                window.location.reload();
+            }
+        });
+    </script>
     <script src="scripts/bundle.js"></script>
 </body>
+
 
 </html>
